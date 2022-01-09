@@ -357,6 +357,7 @@ function QueryFilter<T = Record<string, any>>(props: QueryFilterProps<T>) {
   const context = useContext(ConfigProvider.ConfigContext);
   const baseClassName = context.getPrefixCls('pro-form-query-filter');
 
+  // queryFilter.width || body.clientWidth
   const [width, setWidth] = useMountMergeState(
     () => (typeof style?.width === 'number' ? style?.width : defaultWidth) as number,
   );
